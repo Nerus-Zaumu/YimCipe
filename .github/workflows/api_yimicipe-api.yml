@@ -31,7 +31,7 @@ jobs:
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: node-app
+          name: yimcipe-api
           path: api/dist
 
   deploy:
@@ -54,4 +54,4 @@ jobs:
           app-name: 'yimicipe-api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_920D135FB10649FB9F2BC4A19DE25FA9 }}
-          package: ${{ github.workspace }}/node-app
+          package: yimcipe-api
