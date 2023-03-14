@@ -54,4 +54,4 @@ jobs:
           app-name: 'yimicipe-api'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_920D135FB10649FB9F2BC4A19DE25FA9 }}
-          package: ${{ github.workspace }}/yimcipe-api
+          package: .
