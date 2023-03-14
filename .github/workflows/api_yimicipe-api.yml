@@ -46,6 +46,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: yimcipe-api
+          node-version: '16.x'
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -55,4 +56,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_920D135FB10649FB9F2BC4A19DE25FA9 }}
           package: .
-          startUpCommand: 'pm2 start dist/main.js --no-daemon'
+          startup-command: 'pm2 start dist/main.js --no-daemon'
