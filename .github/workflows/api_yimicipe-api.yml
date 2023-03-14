@@ -27,6 +27,7 @@ jobs:
           npm install -g pnpm
           pnpm install
           pnpm run build
+          pnpm start:prod
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
