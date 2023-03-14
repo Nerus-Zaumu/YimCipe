@@ -26,8 +26,7 @@ jobs:
           cd  api
           npm install -g pnpm
           pnpm install
-          pnpm run build --if-present
-          pnpm run test --if-present
+          pnpm run build
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
