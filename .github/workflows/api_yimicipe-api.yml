@@ -55,5 +55,3 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_920D135FB10649FB9F2BC4A19DE25FA9 }}
           package: .
-      - name: 'Remove yimcipe-api artifacts'
-        run:  rm yimcipe-api
