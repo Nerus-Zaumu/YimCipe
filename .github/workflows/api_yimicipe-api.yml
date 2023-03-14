@@ -27,7 +27,6 @@ jobs:
           npm install -g pnpm
           pnpm install
           pnpm run build
-          pnpm start:prod
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
@@ -56,3 +55,4 @@ jobs:
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_920D135FB10649FB9F2BC4A19DE25FA9 }}
           package: .
+          startUpCommand: 'pm2 start dist/main.js --no-daemon'
