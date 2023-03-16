@@ -7,17 +7,14 @@ import {
 } from '../../../dtos/dto.holder';
 import { Subscriber } from './../../models/subscriber.model';
 import { Profile } from './../../models/profile.model';
-import { RecipeResponse } from './../../utils/response.util';
 import { RecipeCurrentStatus } from './../../utils/types/user.type';
 import { Category } from './../../models/category.model';
 import { generateUUID } from './../../utils/cid-generator.util';
 import { Recipe } from './../../models/recipe.model';
-import { Injectable, HttpStatus, CACHE_MANAGER, Inject } from '@nestjs/common';
+import { Injectable, HttpStatus } from '@nestjs/common';
 import { InjectModel } from '@nestjs/sequelize';
-import { Cache } from 'cache-manager';
 import { User } from '../../models/user.model';
 import { Comments } from '../../models/comments.model';
-import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class RecipeService {

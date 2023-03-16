@@ -1,6 +1,5 @@
-import * as redisStore from 'cache-manager-redis-store';
 import { CommentsModule } from './comments/comments.module';
-import { Module, CacheModule, CacheStore } from '@nestjs/common';
+import { Module } from '@nestjs/common';
 import { SequelizeModule } from '@nestjs/sequelize';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { UserModule } from './user/user.module';
@@ -10,8 +9,6 @@ import { SubscriptionModule } from './subscription/subscription.module';
 import { SharesModule } from './shares/shares.module';
 import { RecipeModule } from './recipe/recipe.module';
 import { SharedModule } from './shared/shared.module';
-import type { RedisClientOptions } from 'redis';
-import { environment } from '../environments/environment';
 import { MulterModule } from '@nestjs/platform-express';
 
 const configService: ConfigService = new ConfigService();
