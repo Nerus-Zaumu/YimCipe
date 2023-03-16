@@ -8,7 +8,7 @@ on:
     branches:
       - api
   workflow_dispatch:
-
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -27,7 +27,6 @@ jobs:
           npm install -g pnpm
           pnpm install
           pnpm run build
-          pnpm start:prod
 
       - name: Archive production artifacts
         uses: actions/upload-artifact@v2
@@ -47,6 +46,7 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: yimcipe-api
+          node-version: '16.x'
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
