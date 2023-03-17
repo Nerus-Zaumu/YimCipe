@@ -1,6 +1,6 @@
 version: '1.0.0'
 services:
-  yimcipe-api:
+  yimcipe:
     build:
       context: .
       dockerfile: Dockerfile

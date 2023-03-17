@@ -2,6 +2,11 @@
 
 FROM node:18-alpine  as development
 
+RUN sed -i -e 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
+    apk update && \
+    apk add bash
+
+
 ENV DATABASE_CONNECTION_STRING=${DATABASE_CONNECTION_STRING}
 ENV JWT_SECRET_KEY=${JWT_SECRET_KEY}
 ENV GOOGLE_CLIENT_ID=${GOOGLE_CLIENT_ID}
